@@ -1,0 +1,108 @@
+html {
+    background-color: #333;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* NAV */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 2px 16px;
+}
+
+.navbar a, .navbar button {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 14px;
+}
+
+.navbar .dropdown:hover .dropbtn, .boto-nav:hover {
+    background-color: red;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn { 
+    font-size: 0.9em; 
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color:#333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* FORM */
+.common-form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.common-form form input
+{
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+    font-size: 1em;
+}
+
+.boto-form
+{
+    text-align: center;
+}
+
+/* COMMON */
+.center-div
+{
+    text-align: center;
+}
+
+.white-link {
+    color: white;
+    text-decoration: none;
+}
+    
+    /* visited link */
+.white-link:visited {
+    color: white;
+}
+
+#wip {
+    font-size: 10em;
+    text-align: center;
+    margin-top: 1.2em;
+}
