@@ -1,6 +1,12 @@
 <?php
-// modelo.php
-function getCategories($connection) {
+include_once __DIR__ . '/model_bd_connection.php';
+function getCategories() {
+    $connection = getConnection();
+
+    if(!$connection)
+    {
+        die("Error en la conexión con la bd.");
+    }
     // Conexión a la base de datos
     $query_result = pg_query($connection, 'SELECT * FROM categoria');
 
