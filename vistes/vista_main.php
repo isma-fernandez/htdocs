@@ -4,7 +4,7 @@
 }?>
 
 
-<h1 id="wip">Work in progress...</h1>
+<h1 id="wip">Vinnyl<br>Work in progress...</h1>
 
 <h1 id="h1-productes">Productes</h1>
 

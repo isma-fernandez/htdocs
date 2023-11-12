@@ -1,9 +1,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Registre</title>
+        <title>Vinnyl</title>
         <meta name="author" content="COMPLETAR" />
-        <meta name="description" content="Botiga de discos de vinil" />
+        <link rel="icon" href="img/logo.jpg" type="image/icon type">
+        <meta name="description" content="Vinnyl" />
         <meta name="keywords" content="disc, vinil" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
