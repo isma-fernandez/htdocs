@@ -11,7 +11,9 @@ switch ($accio) {
         include __DIR__ . '/recurs_login.php';
         break;
     case 'logout':
-        include __DIR__ . '/recurs_logout.php';
+        unset($_SESSION['email']);
+        unset($_SESSION['nom']);
+        include __DIR__ . '/recurs_main.php';
         break;
     case 'user':
         include __DIR__ . '/recurs_client.php';

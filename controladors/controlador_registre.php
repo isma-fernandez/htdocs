@@ -8,7 +8,13 @@ if(session_status() != 2)
 include __DIR__ . "/../models/model_registre.php";
 
 
-
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+    $output = implode(',', $output);
+    
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
 // controlador_registro.php  
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recoge los datos del formulario
@@ -21,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $valid_data = true;
 
-    
+    debug_to_console("1");
 
     //fix nom i postal
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
@@ -46,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         debug_to_console("true baby");
     }
+    debug_to_console("2");
     
 
     if(!$valid_data)
@@ -62,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $resposta = "S'ha creat el compte correctament!";
                     $_SESSION['email'] = $email;
                     $_SESSION['nom'] = $nom;
+                    header("Location: index.php");
                 } else {
                     // Si hubo un error, muestra un mensaje de error
                     $resposta = 'Hi ha hagut un error al registrar el teu compte.';
@@ -72,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $resposta = "El correu ja existeix.";
         }
     }
+    debug_to_console("3");
         
 }
 include __DIR__ . "/../vistes/vista_registre.php";

@@ -23,23 +23,15 @@ if(session_status() != 2)
   } else
   {
     echo('<div class="navbar-center"><p>Benvingut ' .$_SESSION['nom'] . '</p>
-    <button class="dropbtnmenu" onclick="dropMenu()">Dropdown
-    </button>
-    <div class="dropdown-content-menu" id="dropdown-menu">
-    </div>
+    <div class="dropdown-menu">
+  <button onclick="myFunction()" class="dropbtn-menu">Menú </button>
+  <div id="dropdown-menu-acc" class="dropdown-content-menu">
+    <a href="#">Compte</a>
+    <a href="#">Compres</a>
+    <a href="index.php?accio=logout">Sortir</a>
+  </div>
+</div>
     </div>');
   } ?>
 </div>
 <hr>
-<script>
-function categoriaSeleccionada(IDcategoria) {
-  $(".fotosInici").hide('slow');
-   fetch("controller/c_productes_categories.php?categoria=" + IDcategoria)
-    .then(response => {
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById("productesXCategoria").innerHTML = data;
-    });
-    }
-</script>
