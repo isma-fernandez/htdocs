@@ -57,10 +57,12 @@ body{
     position: relative;
 }
 
-
+.dropbtn {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .dropdown .dropbtn { 
-    font-size: 1.1em; 
+    font-size: 1em; 
     border: none;
     outline: none;
     color: white;
