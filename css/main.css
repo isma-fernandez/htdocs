@@ -19,6 +19,7 @@ body{
     align-items: center;
     background-color: #333;
     padding: 2px 16px;
+    margin: 0px 40px;
 }
 
 .navbar-center
@@ -162,11 +163,19 @@ body{
 
 .producte-container
 {
-    border: 1px solid black;
+    border: 2px solid whitesmoke;
     padding: 2%;
     width: auto;
     text-align: center;
 }
+
+.producte-detall-container
+{
+    padding: 2%;
+    width: auto;
+    text-align: center;
+}
+
 
 #h1-productes
 {
@@ -174,8 +183,28 @@ body{
     text-align: center;
 }
 
+/* DETALL PRODUCTE */
+.preu-producte
+{
+    font-size: 1.4em;
+}
+
+.boto-afegir-carrito
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: darkgreen;
+    color: white;
+}
+
+.producte-descripcio
+{
+    margin: 0 auto;
+    width: 50%;
+}
 /* MENU ACC */
-/* Dropdown Button */
 .dropbtn-menu {
     background-color: red;
     color: white;
@@ -185,18 +214,15 @@ body{
     cursor: pointer;
   }
   
-  /* Dropdown button on hover & focus */
   .dropbtn-menu:hover, .dropbtn-menu:focus {
     background-color: red;
   }
   
-  /* The container <div> - needed to position the dropdown content */
   .dropdown-menu {
     position: relative;
     display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content-menu {
     display: none;
     position: absolute;
@@ -206,7 +232,6 @@ body{
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
   .dropdown-content-menu a {
     color: black;
     padding: 12px 16px;
@@ -214,8 +239,6 @@ body{
     display: block;
   }
   
-  /* Change color of dropdown links on hover */
   .dropdown-content-menu a:hover {background-color: #ddd;}
   
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
