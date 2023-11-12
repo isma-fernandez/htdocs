@@ -7,13 +7,7 @@ if(session_status() != 2)
 
 include __DIR__ . "/../models/model_registre.php";
 
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
 
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
 
 // controlador_registro.php  
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

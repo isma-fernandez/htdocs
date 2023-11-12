@@ -25,14 +25,7 @@ function dropMenu() {
     document.getElementById("dropdown-menu").classList.toggle("show");
 }
 
-window.onclick = function(e) {
-    if (!e.target.matches('.dropbtnmenu')) {
-    var myDropdown = document.getElementById("dropdown-menu");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-    }
-  }
+
 
 $(document).ready(function(){
 
