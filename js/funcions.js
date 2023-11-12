@@ -6,9 +6,13 @@ $(document).ready(function() {
         success: function(categorias) {
             var dropdown = $('.dropdown-content');
             dropdown.empty();
-
             $.each(categorias, function(i, categoria) {
-                dropdown.append($('<a href="#"></a>').text(categoria.nombre));
+              var link = $('<a href="#"></a>').text(categoria.nombre);
+                link.on('click', function(e) {
+                    e.preventDefault();
+                    showProductesCategoria((i+1));
+                });
+                dropdown.append(link);
             });
         },
         error: function(error) {
@@ -17,3 +21,22 @@ $(document).ready(function() {
     });
 });
 
+function dropMenu() {
+    document.getElementById("dropdown-menu").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+    if (!e.target.matches('.dropbtnmenu')) {
+    var myDropdown = document.getElementById("dropdown-menu");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+
+$(document).ready(function(){
+
+    $('.dropbtn').click(function(){
+      $('.dropdown-content').toggle();
+    });
+  });

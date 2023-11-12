@@ -12,16 +12,9 @@
         <script type="text/javascript" src="/../js/funcions.js"> </script>
     </head>
 
-    <!-- SESSIO -->
-    <?php
-        if(isset($_SESSION['mail']))
-        {
-            $email = $_SESSION['mail'];
-        }
-    ?>
 
     <body>
         <?php include __DIR__ . '/controladors/controlador_menu.php'; ?>
-        <h1 id="wip">WIP</h1>
+        <?php include __DIR__ . '/controladors/controlador_main.php' ?>
     </body>
 </html>

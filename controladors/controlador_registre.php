@@ -1,6 +1,6 @@
 <?php
 
-if(session_status != 2)
+if(session_status() != 2)
 {
     session_start();
 }
@@ -66,6 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
             if ($resultat) {
                     $resposta = "S'ha creat el compte correctament!";
+                    $_SESSION['email'] = $email;
+                    $_SESSION['nom'] = $nom;
                 } else {
                     // Si hubo un error, muestra un mensaje de error
                     $resposta = 'Hi ha hagut un error al registrar el teu compte.';

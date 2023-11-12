@@ -28,6 +28,11 @@ body{
     align-items: center;
 }
 
+.navbar-center p
+{
+    padding: 0px 20px;
+}
+
 .navbar a, .navbar button {
     color: #f2f2f2;
     text-align: center;
@@ -35,15 +40,23 @@ body{
     padding: 14px 14px;
 }
 
+.navbar button {
+    background-color: #333;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+
+}
+
 .navbar .dropdown:hover .dropbtn, .boto-nav:hover {
     background-color: red;
 }
 
-
-
 .dropdown {
     position: relative;
 }
+
+
 
 .dropdown .dropbtn { 
     font-size: 1.1em; 
@@ -54,7 +67,7 @@ body{
     margin: 0;
 }
 
-.dropdown-content {
+.dropdown-content, .dropdown-content-menu {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -62,6 +75,10 @@ body{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+
+.show {
+    display: block;
 }
 
 .dropdown-content a {
@@ -72,11 +89,20 @@ body{
     text-align: left;
 }
 
+.dropdown-content-menu a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown-menu:hover .dropdown-content-menu {
     display: block;
 }
 
@@ -123,5 +149,27 @@ body{
 }
 
 .missatgeregistre {
+    text-align: center;
+}
+
+/* PRODUCTES */
+#llista-productes-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
+}
+
+.producte-container
+{
+    border: 1px solid black;
+    padding: 2%;
+    width: auto;
+    text-align: center;
+}
+
+#h1-productes
+{
+    display: none;
     text-align: center;
 }
