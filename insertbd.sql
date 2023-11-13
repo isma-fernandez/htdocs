@@ -1,5 +1,8 @@
 -- RECORDAR QUITAR CAMPO ESTADO DE PRODUCTO
 
+INSERT INTO categoria (nombre)
+VALUES ('Rock'),('Blues'),('Pop'),('Flamenco'),('Punk'),('Reggae'),('Jazz'),('Indie'),('Folk'),('Música clàssica'),('Hip-Hop'),('Electrònica'),('Rap');
+
 INSERT INTO producte (titulo, artista, año_lanzamiento, precio, id_categoria, img)
 VALUES ('Manual Para Los Fieles', 'Los Piratas', 2000, 25.99, 1, 'rock_1.jpg'),
 ('Vinilo Maiden Flight', 'Rainbird', 2000, 19.99, 1, 'rock_2.jpg'),
@@ -12,7 +15,7 @@ VALUES ('Manual Para Los Fieles', 'Los Piratas', 2000, 25.99, 1, 'rock_1.jpg'),
 ('Songs From The Wood', 'Jethro Tull', 2000, 27.99, 1, 'rock_9.jpg'),
 ('El Sueño Eterno', 'Medina Azahara', 2000, 18.99, 1, 'rock_10.jpg'),
 ('Inside', 'Urban Sax', 2000, 29.99, 1, 'rock_11.jpg'),
-('Atom Heart Mother Japan 1971', 'Pink Floyd', 2000, , 1, 'rock_12.jpg'),
+('Atom Heart Mother Japan 1971', 'Pink Floyd', 2000, 20.99, 1, 'rock_12.jpg'),
 ('Hard To Imagine The Neighbourhood', 'Neighbourhood', 2000, 42.99, 1, 'rock_13.jpg'),
 ('Scorched', 'Overkill', 2000, 38.99, 1, 'rock_14.jpg'),
 ('True Confessions', 'Bananarama', 2000, 27.99, 2, 'blues_1.jpg'),
