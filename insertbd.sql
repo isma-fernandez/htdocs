@@ -1,7 +1,7 @@
 -- RECORDAR QUITAR CAMPO ESTADO DE PRODUCTO
 
-INSERT INTO categoria (nombre)
-VALUES ('Rock'),('Blues'),('Pop'),('Flamenco'),('Punk'),('Reggae'),('Jazz'),('Indie'),('Folk'),('Música clàssica'),('Hip-Hop'),('Electrònica'),('Rap');
+INSERT INTO categoria (id, nombre)
+VALUES (1, 'Rock'),(2, 'Blues'),(3, 'Pop'),(4, 'Flamenco'),(5, 'Punk'),(6, 'Reggae'),(7, 'Jazz'),(8, 'Indie'),(9, 'Folk'),(10, 'Música clàssica'),(11, 'Hip-Hop'),(12, 'Electrònica'),(13, 'Rap');
 
 INSERT INTO producte (titulo, artista, año_lanzamiento, precio, id_categoria, img)
 VALUES ('Manual Para Los Fieles', 'Los Piratas', 2000, 25.99, 1, 'rock_1.jpg'),
