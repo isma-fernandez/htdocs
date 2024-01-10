@@ -189,3 +189,20 @@ function updateTotal()
     document.getElementById("total-carrito").innerHTML = "Total: " + total.toFixed(2) + " €";
 
 }
+
+async function realitzarCompra()
+{
+    const url = '../controladors/controlador_carrito.php?a=compra';
+    fetch(url)
+        .then(response => {
+            if(!response.ok){
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(html => {
+            console.log(html);
+        }).catch(error => {
+            console.error('Error al actualizar la cantidad de elementos de la cesta:', error);
+        });
+}

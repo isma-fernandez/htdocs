@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+include __DIR__ . '/../models/model_usuari.php';
+include __DIR__ . '/../models/model_productes.php';
+include __DIR__ . '/../models/model_carrito.php';
+
 $a = $_GET['a'] ?? NULL;
 
 if($a === 'add')
@@ -56,6 +60,22 @@ elseif($a === 'netejar')
         $result = ($initial_price*$cantidad);
         echo $result;
     }
+}elseif($a === 'compra')
+{
+    if(isset($_SESSION['email'])){
+        $client = getUserInfo($_SESSION['email']);
+    }
+    $id_client = $client['id'];
+    $id_productes = [];
+    $quantities = [];
+    foreach ($_SESSION['cesta'] as $prod => $cant) {
+        $producte = getProducteByNom($prod);
+        array_push($id_productes, $producte[0]['id']);
+        array_push($quantities, $cant);
+    }
+    $resposta = realitzaCompra($id_client, $id_productes, $quantities);
+
+    echo $resposta; 
 }
 /*
 '<div class="producte-container" onClick=detallProducte(this)>
