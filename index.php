@@ -3,6 +3,7 @@
 # CHANGE NULL FOR #
 $accio = $_GET['accio'] ?? NULL;
 session_start();
+//unset($_SESSION['cesta']);
 switch ($accio) {
     case 'registre':
         include __DIR__ . '/recurs_registre.php';
@@ -15,8 +16,8 @@ switch ($accio) {
         unset($_SESSION['nom']);
         include __DIR__ . '/recurs_main.php';
         break;
-    case 'user':
-        include __DIR__ . '/recurs_client.php';
+    case 'usuari':
+        include __DIR__ . '/recurs_usuari.php';
         break;
     case 'productes':
         include __DIR__ . '/controladors/controlador_productes.php';
@@ -26,6 +27,9 @@ switch ($accio) {
         break;
     case 'pedidos':
         include __DIR__ . '/recurs_comandes.php';
+        break;
+    case 'actualizarCarrito':
+        include __DIR__ . '/controladors/controlador_carrito.php';
         break;
     default:
         include __DIR__ . '/recurs_main.php';

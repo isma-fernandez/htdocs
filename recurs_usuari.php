@@ -15,6 +15,6 @@
 
     <body>
         <?php include __DIR__ . '/controladors/controlador_menu.php'; ?>
-        <?php include __DIR__ . '/controladors/controlador_pag_carrito.php'; ?>
+        <?php include __DIR__ . '/controladors/controlador_usuari.php'; ?>
     </body>
 </html>

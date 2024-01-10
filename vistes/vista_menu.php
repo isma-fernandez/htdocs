@@ -18,19 +18,29 @@ if(session_status() != 2)
     </div>
 </div>
 <?php 
+  if(!isset($_SESSION['cesta']))
+  {
+    $carrito_counter = 0;
+  }
+  else {
+    $carrito_counter = count($_SESSION['cesta']);
+  }
   if(!isset($_SESSION['email'])) {
-  echo('<div><a class="boto-nav" href="/index.php?accio=registre">Registra\'t</a><a class="boto-nav" href="/index.php?accio=login">Iniciar Sessió</a></div>');
+  echo('<div class="navbar-center"><a class="boto-nav" href="/index.php?accio=registre">Registra\'t</a><a class="boto-nav" href="/index.php?accio=login">Iniciar Sessió</a></div>');
   } else
   {
     echo('<div class="navbar-center"><p>Benvingut ' .$_SESSION['nom'] . '</p>
     <div class="dropdown-menu">
-  <button onclick="myFunction()" class="dropbtn-menu">Menú </button>
+  <button onclick="dropMenu()" class="dropbtn-menu">Menú </button>
+  
   <div id="dropdown-menu-acc" class="dropdown-content-menu">
-    <a href="#">Compte</a>
+    <a href="index.php?accio=usuari">Compte</a>
     <a href="#">Compres</a>
     <a href="index.php?accio=logout">Sortir</a>
   </div>
+  
 </div>
+<div><a href="/index.php?accio=cart"><img id="carrito" src="../img/carrito.png" alt="carrito" width="50px"/></a><span id="contador-carrito">'. $carrito_counter . '</span></div>
     </div>');
   } ?>
 </div>

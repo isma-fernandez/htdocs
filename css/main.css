@@ -49,6 +49,20 @@ body{
 
 }
 
+#contador-carrito{
+    position: absolute; 
+    top: 20; 
+    right: 60; 
+    background-color: red; 
+    color: white; 
+    padding: 0 5px; 
+    border-radius: 50%;
+}
+
+#carrito {
+    margin-left: 30px;
+}
+
 .navbar .dropdown:hover .dropbtn, .boto-nav:hover {
     background-color: red;
 }
@@ -247,3 +261,53 @@ body{
   .dropdown-content-menu a:hover {background-color: #ddd;}
   
   .show {display:block;}
+
+/* MODIFCAR COMPTE */
+#foto-usuari  {
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+
+/* CARRITO */
+.producte-carrito-container {
+    padding: 20px;
+    border: 1px solid white;
+    background-color: rgba(255, 252, 252, 0.1);
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-areas: 
+        "image image title"
+        "image image price"
+        "image image quantity";
+    text-align: center;
+}
+
+.info-carrito{
+    text-align: right;
+}
+
+.imatge-carrito {
+    grid-area: image;
+}
+
+.titol-carrito {
+    grid-area: title;
+}
+
+.preu-carrito {
+    grid-area: price;
+}
+
+.quantity-carrito {
+    grid-area: quantity;
+}
+
+#total-carrito {
+    margin-right: 22%;
+    margin-left: 22%;
+    margin-bottom: 2%;
+    text-align: right;
+}
+

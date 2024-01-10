@@ -6,7 +6,9 @@ if(session_status() != 2)
 }
 
 include __DIR__ . "/../models/model_registre.php";
-
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 
 function debug_to_console($data) {
     $output = $data;
@@ -27,32 +29,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $valid_data = true;
 
+
+    $name_options = '/^[a-zA-Z\s]+$/';
+    $postal_code_options = '/^\d{5}$/';
+
     debug_to_console("1");
 
-    //fix nom i postal
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
     {
         debug_to_console("email baby");
         $valid_data = false;
-    } elseif (!ctype_alnum($password)) 
+    } 
+    if (!ctype_alnum($password)) 
     {
-        debug_to_console("password baby");
-        $valid_data = false;
-    } elseif (strlen($adreca) > 30) 
-    {
-        debug_to_console("adreca baby");
-        $valid_data = false;
-    } elseif (strlen($poblacio) > 30) 
-    {
-        debug_to_console("poblacio baby");
+        debug_to_console("email baby2");
+
         $valid_data = false;
     } 
-
-    if($valid_data)
+    if (strlen($address) > 30) 
     {
-        debug_to_console("true baby");
+        debug_to_console("email baby3");
+
+        $valid_data = false;
+    } 
+    if (strlen($poblacio) > 30) 
+    {
+        debug_to_console("email baby4");
+
+        $valid_data = false;
+    } 
+    if(!filter_var($nom, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>$name_options))))
+    {
+        debug_to_console("email baby6");
+
+        $valid_data = false;
     }
-    debug_to_console("2");
+    if(!preg_match($postal_code_options, $postalcode)) {
+        debug_to_console("email baby5");
+        $valid_data = false;
+    }
+    
     
 
     if(!$valid_data)
@@ -80,7 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $resposta = "El correu ja existeix.";
         }
     }
-    debug_to_console("3");
         
 }
 include __DIR__ . "/../vistes/vista_registre.php";

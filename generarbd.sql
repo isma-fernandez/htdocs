@@ -20,7 +20,8 @@ CREATE TABLE client (
     contrasenya VARCHAR(255) NOT NULL,
     adreça VARCHAR(30) NOT NULL,
     poblacio VARCHAR(30) NOT NULL,
-    codi_postal VARCHAR(5) NOT NULL
+    codi_postal VARCHAR(5) NOT NULL,
+    img VARCHAR(50)
 );
 
 CREATE TABLE venda (
