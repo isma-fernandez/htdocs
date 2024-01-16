@@ -14,7 +14,10 @@
     </head>
 
     <body>
+    <section class="content">
         <?php include __DIR__ . '/controladors/controlador_menu.php'; ?>
         <?php include __DIR__ . '/controladors/controlador_usuari.php'; ?>
+</section>
+<?php include __DIR__ . '/controladors/controlador_footer_pag.php' ?>
     </body>
 </html>

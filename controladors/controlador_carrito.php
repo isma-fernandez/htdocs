@@ -73,8 +73,15 @@ elseif($a === 'netejar')
         array_push($id_productes, $producte[0]['id']);
         array_push($quantities, $cant);
     }
-    $resposta = realitzaCompra($id_client, $id_productes, $quantities);
+    if(count($id_productes) != 0)
+    {
+        $resposta = realitzaCompra($id_client, $id_productes, $quantities);
 
+        if($resposta === "1")
+        {
+            unset($_SESSION['cesta']);
+        }
+    }
     echo $resposta; 
 }
 /*

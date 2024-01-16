@@ -33,12 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } 
     if (!ctype_alnum($password)) 
     {
-
         $valid_data = false;
     } 
     if (strlen($address) > 30) 
     {
-
         $valid_data = false;
     } 
     if (strlen($poblacio) > 30) 
@@ -49,7 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         $valid_data = false;
     }
-    if(!preg_match($postal_code_options, $postalcode)) {
+    if(!preg_match($postal_code_options, $postalcode)) 
+    {
         $valid_data = false;
     }
 
@@ -91,15 +90,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             {
                 $resposta = "Hi ha hagut un error al modificar les teves dades";
             }
-            
         }
         else 
         {
             $resposta = "Contrasenya incorrecta, introdueix la contrasenya correcta per poder modificar les dades.";
         }
-
     }
-
 }
 
 $usuari = getUserInfo($_SESSION['email']);

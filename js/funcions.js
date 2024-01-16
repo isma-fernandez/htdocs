@@ -26,7 +26,20 @@ function dropMenu() {
     document.getElementById("dropdown-menu-acc").classList.toggle("show");
 }
 
-
+$(document).ready(function() {
+    $.ajax({
+        url: 'controladors/controlador_footer.php',
+        type: 'GET',
+        dataType: 'text',
+        success: function(html)
+        {
+            document.getElementById("footer").innerHTML += html;
+        },
+        error: function(error) {
+            console.log('Error: ', error);
+        }
+    })
+})
 
 
 
@@ -201,7 +214,14 @@ async function realitzarCompra()
             return response.text();
         })
         .then(html => {
-            console.log(html);
+            if(html == "1")
+            {
+                document.getElementById("elements-carrito-container").innerHTML = "";
+                var p = document.createElement("p");
+                p.innerHTML = "S'ha realitzat la compra.";
+                document.getElementById("elements-carrito-container").appendChild(p);
+                updateContadorCarrito();
+            }
         }).catch(error => {
             console.error('Error al actualizar la cantidad de elementos de la cesta:', error);
         });

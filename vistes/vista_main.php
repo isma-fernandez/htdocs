@@ -5,7 +5,10 @@
 
 
 <section id="main-body">
-    <h1 id="wip">Vinnyl<br>Work in progress...</h1>
+    <!--<h1 id="titol-portada">Benvingut a Vinnyl</h1>-->
+    <div id="main-image-container">
+        <img id="main-portada" src="/img/main.jpg" alt="imatge de portada"/>
+    </div>
 </section>
 <section id="detall-producte">
 

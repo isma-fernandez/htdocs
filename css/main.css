@@ -159,12 +159,7 @@ body{
     color: white;
 }
 
-#wip {
-    padding-top: 120px;
-    font-size: 5em;
-    text-align: center;
-    margin-top: 1.2em;
-}
+
 
 .missatgeregistre {
     text-align: center;
@@ -177,6 +172,12 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 10%;
+}
+
+.imatge-producte
+{
+    max-width: 100%;
+    height: auto;
 }
 
 .producte-container
@@ -311,3 +312,114 @@ body{
     text-align: right;
 }
 
+/* COMANDES */
+
+.producte-comanda-container {
+    padding: 20px;
+    border: 1px solid white;
+    background-color: rgba(255, 252, 252, 0.1);
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-areas: 
+        "image image title"
+        "image image price"
+        "image image quantity";
+    text-align: center;
+}
+
+.info-comanda{
+    text-align: right;
+}
+
+.imatge-comanda {
+    grid-area: image;
+}
+
+.titol-comanda {
+    grid-area: title;
+}
+
+.preu-comanda {
+    grid-area: price;
+}
+
+.quantity-comanda {
+    grid-area: quantity;
+}
+
+#total-comanda {
+    margin-right: 22%;
+    margin-left: 22%;
+    margin-bottom: 2%;
+    text-align: right;
+}
+
+.comanda-container
+{
+    border: 1px solid white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: right;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+/* MAIN */
+
+#titol-portada {
+    padding-top: 10px;
+    font-size: 4em;
+    text-align: center;
+}
+
+#main-image-container
+{
+    text-align: center;
+    width: auto;
+}
+
+#main-portada
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    text-align: center;
+    padding-top: 3%
+}
+
+footer {
+    padding-left: 7%;
+    padding-right: 7%;
+    position: fixed;
+    background-color: #333;
+    width: 100%;
+    bottom: 0px;
+  }
+
+
+
+.content 
+{
+   margin-bottom: 150px;
+}
+
+#carrito-footer-container, #carrito-footer-container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.imgs-items-footer
+{
+    width: 7%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+#carrito-footer-productes-container
+{
+    width: 40%;
+}

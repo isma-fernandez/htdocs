@@ -37,35 +37,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
     {
-        debug_to_console("email baby");
         $valid_data = false;
     } 
     if (!ctype_alnum($password)) 
     {
-        debug_to_console("email baby2");
-
         $valid_data = false;
     } 
     if (strlen($address) > 30) 
     {
-        debug_to_console("email baby3");
-
         $valid_data = false;
     } 
     if (strlen($poblacio) > 30) 
     {
-        debug_to_console("email baby4");
-
         $valid_data = false;
     } 
     if(!filter_var($nom, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>$name_options))))
     {
-        debug_to_console("email baby6");
-
         $valid_data = false;
     }
     if(!preg_match($postal_code_options, $postalcode)) {
-        debug_to_console("email baby5");
         $valid_data = false;
     }
     

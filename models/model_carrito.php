@@ -20,7 +20,7 @@
         $result = pg_query_params($connection, $sql_venda_id, $params);
         $rows = pg_fetch_all($result);
         $id_venda = $rows[0]['id'];
-
+        
         for($i=0; $i < count($id_productes); $i += 1)
         {
             $sql_venda_producte = "INSERT INTO venda_producte (id_venda, id_producte, quantitat)
@@ -35,7 +35,7 @@
                 die("ERROR PUJANT ELS PRODUCTES: ");
             }
         }
-        $resposta = "Good!";
+        $resposta = "1";
         return $resposta;
     }
 ?>

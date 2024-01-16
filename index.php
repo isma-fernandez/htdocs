@@ -25,7 +25,7 @@ switch ($accio) {
     case 'cart':
         include __DIR__ . '/recurs_carrito.php';
         break;
-    case 'pedidos':
+    case 'comandes':
         include __DIR__ . '/recurs_comandes.php';
         break;
     case 'actualizarCarrito':

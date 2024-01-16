@@ -3,7 +3,15 @@
         <div class="center-div">
         <h2>Carrito</h2>
         <div class="center-div">
-        <button type="button" id="myButton" class="btn" onClick="netejarCarrito()">Netejar carrito</button>
+        <?php if(count($carrito) != 0)
+        {
+            echo'<button type="button" id="myButton" class="btn" onClick="netejarCarrito()">Netejar carrito</button>';
+        }
+        else
+        {
+            echo '<h3>No tens cap producte afegit al carrito</h3>';
+        }
+        ?>
     </div>
             <?php if (isset($resposta)): ?>
                 <p><?php echo $resposta; ?></p>
@@ -16,14 +24,23 @@
             echo $elemento;
         }
         ?>
-        <div id="total-carrito">
-            <p>Total: </p>
+        <?php if(count($carrito) != 0)
+        {
+            echo'<div id="total-carrito">
+            <p>Total: </p>';
+        }
+        ?>
+       
     </div>
         </div>
-        
-    <div class="center-div">
-        <button type="button" id="myButton" class="btn" onClick="realitzarCompra()">Realitzar compra</button>
-    </div>
+        <?php if(count($carrito) != 0)
+        {
+            echo'<div class="center-div">
+            <button type="button" id="myButton" class="btn" onClick="realitzarCompra()">Realitzar compra</button>
+        </div>';
+        }
+        ?>
+    
 
         
     </section>

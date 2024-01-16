@@ -14,7 +14,9 @@
     </head>
 
     <body>
-        <?php include __DIR__ . '/controladors/controlador_menu.php'; ?>
-        <?php include __DIR__ . '/controladors/controlador_pag_carrito.php'; ?>
+        <section class="content">
+            <?php include __DIR__ . '/controladors/controlador_menu.php'; ?>
+            <?php include __DIR__ . '/controladors/controlador_pag_carrito.php'; ?>
+        </section>
     </body>
 </html>

@@ -11,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
     $result = login($email, $password);
 
     if($result != false)
@@ -26,10 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 }
-
-
-
-
 
 include __DIR__ . "/../vistes/vista_login.php";
 ?>
